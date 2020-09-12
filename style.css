@@ -21,6 +21,7 @@ body {
     --primary : #16005C;
     --secondary : #3DBE71;
     --text: #828282;
+    --link : #333333
 }
 bg-color {
     width: 100vw;
@@ -30,7 +31,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 16px;
+    padding: 16px 8px;
     background: #F9FFFB;
     height: 80px;
 }
@@ -54,9 +55,9 @@ span {
     font-weight: 700;
 
 }
-.active {
+/* .active {
     color: var(--primary) !important;
-}
+} */
 .logo-name{
     display: flex;
     align-items: center;
@@ -71,7 +72,7 @@ span {
     align-items: center;
 }
 .nav-link {
-    color: var(--text);
+    color: var(--link);
     font-size: 1.4rem;
     display: inline-block;
     padding: 8px 4px;
@@ -258,14 +259,14 @@ dd {
 
 @media only screen and (max-width: 600px), only screen and (max-width: 992px) {
     body {
-        padding: 8px;
+        padding: 4px 8px;
     }
     .grid {
         display: none;
     }
     header {
         display: block;
-        padding-left: 24px;
+        padding-left: 8px;
     }
     nav {
         display: block;
@@ -288,7 +289,7 @@ dd {
         height: auto;
     } 
     .illustration {
-        width: 90vw;
+        width: 100%;
     }
     .flex {
         width: unset;
