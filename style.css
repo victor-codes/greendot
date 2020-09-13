@@ -9,7 +9,7 @@
     font-family: 'Roboto', sans-serif; */
 }
 .style_container {
-    max-width: 1296px;
+    max-width: 1248px;
     margin: auto;
 }
 body {
@@ -231,7 +231,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    width: 350px;
+    max-width: 350px;
     
     /* margin-right: 56px; */
 }
@@ -284,6 +284,7 @@ dd {
         width: auto;
     }
     h1 {
+        font-size: 4rem;
         margin-top: 40px;
         width: auto;
         height: auto;
