@@ -1,15 +1,12 @@
-const open = document.getElementById("hamburger-icon")
-const close = document.getElementById('hidden-nav')
-
-
 function openNav() {
     document.getElementById("hidden-nav").style.visibility = 'visible';
     document.getElementById("hidden-nav").style.width = '100%';
+    document.getElementById("hidden-nav").style.transition = '0.3s';
     // document.getElementById("hidden-nav").style.animation = 'slide-in-right 1000ms ease-in 0ms both';
 }
 function closeNav() {
     document.getElementById('hidden-nav').style.visibility = 'hidden';
-    document.getElementById('hidden-nav').style.width = '0';
+    document.getElementById('hidden-nav').style.width = '0%';
 }
 
 let fruit = ['banana', 'apples', 'mango', 'orange', 'tomato', 'pineapple', 'pawpaw']
