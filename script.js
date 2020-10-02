@@ -3,13 +3,17 @@ const close = document.getElementById('hidden-nav')
 
 
 function openNav() {
-   document.getElementById("hidden-nav").style.left = '0px';
+    document.getElementById("hidden-nav").style.visibility = 'visible';
+    document.getElementById("hidden-nav").style.width = '100%';
+    // document.getElementById("hidden-nav").style.animation = 'slide-in-right 1000ms ease-in 0ms both';
 }
 function closeNav() {
-    document.getElementById('hidden-nav').style.display = 'none';
+    document.getElementById('hidden-nav').style.visibility = 'hidden';
+    document.getElementById('hidden-nav').style.width = '0';
 }
 
-
+let fruit = ['banana', 'apples', 'mango', 'orange', 'tomato', 'pineapple', 'pawpaw']
+//filter array items based on search criteria (keyword)
 
 // function orbitalPeriod(arr) {
 //     var GM = 398600.4418;
