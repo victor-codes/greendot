@@ -367,7 +367,7 @@ dd {
         font-size: 4.8rem;
         color: #000000;
         font-weight: lighter;
-        opacity: 0.1;
+        opacity: 0.5;
     }
     .overlay-content {
         display: flex;
