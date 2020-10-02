@@ -27,7 +27,7 @@ bg-color {
     width: 100vw;
     height: 130px;
 }
-header {
+#header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -267,7 +267,7 @@ dd {
     .grid {
         display: none;
     }
-    header {
+    #header {
         display: flex;
         flex-direction: row;
         padding-left: 8px;
@@ -314,11 +314,14 @@ dd {
     img {
         display: none;
     }
-    .hamburger-icon, .hamburger {
+    .hamburger {
+        display: block;
+    }
+    .hamburger-icon {
         display: flex;
         flex-direction: column;
         width: fit-content;
-        margin: auto 0;
+        margin: auto 8px;
     }
     .hamburger-icon1, .hamburger-icon2{
         width: 28px;
@@ -330,63 +333,117 @@ dd {
         margin-top: 6px;
     }
     .hidden-nav {
+        display: none;
         position: fixed;
-        overflow-x: hidden;
-        visibility: hidden;
-        width: 0;
-        right: 0px;
         top: 0;
-        display: flex;
-        height: 100%;
-        /* flex-direction: column; */
-        /* align-items: center; */
-        padding: 16px;
-        background-color: rgb(255, 255, 255);
-        transition: .3s;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+    .animate-right {
+        animation: animate-right .5s ease-in-out 300ms both;
+    }
+    @keyframes animate-right { 
+        0% {
+            right: -300px;
+            opacity: 0;
+        }
+        100% {
+            right: 0px;
+            opacity: 1;
+        }
         
     }
-    .hamburger{
+    .align {
         display: flex;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        justify-content: center;
         align-items: center;
-        margin: 0;
+    }
+    .hamburger {
         position: absolute;
         top: 32px;
-        right: 20px;
-    }
-    .navlink{
-        display: block;
-        font-size: 2.4rem;
-        text-transform: capitalize;
-        margin-bottom: 24px;
-        color: #000000;
-    }
-    .navlink:last-child {
-        margin-bottom: 0;
-    }
-    .navlink > span {
-        font-size: 4.8rem;
-        color: #000000;
-        font-weight: lighter;
-        opacity: 0.5;
+        right: 28px;
     }
     .overlay-content {
         display: flex;
+        vertical-align: middle;
+        flex-direction: column;
         width: fit-content;
         margin: auto;
-        flex-direction: column;
-        /* align-items: center; */
-        padding: 16px;
+        
     }
-        @keyframes slide-in-right {
-            0% {
-                transform: translateX(100px);
-            }
-            100% {
-                transform: translateX(0);
-            }
+    .navlink {
+        font-size: 2rem;
+        color: rgb(43, 43, 43);
+        text-transform: capitalize;
+        margin-bottom: 16px;
+    }
+    .navlink:first-child{
+        
+        animation: slide-left 700ms ease-out 1s both;
+    }
+    .navlink:nth-child(2){
+        
+        animation: slide-left 700ms ease-out 1.5s both;
+    }
+    .navlink:nth-child(3){
+        
+        animation: slide-left 700ms ease-out 2s both;
+    }
+    .navlink:nth-child(4){
+        
+        animation: slide-left 700ms ease-out 2.5s both;
+    }
+    .navlink:nth-child(5){
+        
+        animation: slide-left 700ms ease-out 3s both;
+    }
+    .navlink:nth-child(6){
+        
+        animation: slide-left 700ms ease-out 3.5s both;
+    }
+    .navlink:last-child{
+        
+        animation: slide-left 700ms ease-out 4s both;
+    }
+    .navlink > span {
+        font-size: 3.2rem;
+        color: black;
+        opacity: 0.5;
+        font-weight: lighter;
+        animation: slide-right 3s ease-out 4.5s both;
 
-            
+    }
+    @keyframes slide-left {
+        0% {
+            transform: translateX(100px); 
+            opacity: 0;
         }
+        100% {
+            transform: translateX(0px); 
+            opacity: 1;
+        }
+    }
+
+
+
+
+    
+    @keyframes  slide-right {
+        0% {
+            transform: translateX(-1000px); 
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0px); 
+            opacity: 0.5;
+        }
+    }
+    /* .animate-right{animation:animateright 0.4s}@keyframes animateright{from{right:-3000px;opacity:0} to{right:0;opacity: 1; */
 
 /* @media (prefers-color-scheme : dark ) {
     body {
